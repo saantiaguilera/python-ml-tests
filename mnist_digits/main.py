@@ -82,8 +82,8 @@ def build_model(input_var=None):
     # W is the Theano variable representing the filter weights
     # b can be used for biases too
     network = lasagne.layers.Conv2DLayer(
-            network, 
-            num_filters=32, 
+            network,
+            num_filters=32,
             filter_size=(5, 5),
             nonlinearity=lasagne.nonlinearities.rectify,
             W=lasagne.init.GlorotUniform())
@@ -144,7 +144,7 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 # easier to read.
 
 def main():
-    num_epochs = 500
+    num_epochs = 100
     # Load the dataset
     print("Loading data...")
     X_train, y_train, X_val, y_val, X_test, y_test = load_dataset()
